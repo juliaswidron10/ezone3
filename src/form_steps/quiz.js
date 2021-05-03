@@ -38,19 +38,14 @@ export class Quiz extends React.Component {
         this.setState({
             [name]: checked
         })
-        if(this.state.name === true) {
-            let inputStyle = {
-                backgroundColor: '$orange',
-                color: '$dark'
-            }
-          }  
+       
 
         // this.setState({[name]: event.target.value});
     }
     handleSubmit = (event) => {
         event.preventDefault()
-        const {currentStep, hours, stream, interests, games, types, content} = this.props
-        alert(`Something doesn't work with this submit`)
+       /* const {currentStep, hours, stream, interests, games, types, content} = this.props
+        alert(`Something doesn't work with this submit`)*/
         console.log('You submited')
         // const data = new FormData(event.target);
     }
@@ -104,7 +99,7 @@ export class Quiz extends React.Component {
               return(
                   <button
                   className="btn submitbutton" type="submit"
-                  type="button" onClick={this._next}>
+                  onClick={this._next}>
                     Submit
                   </button>
               )
