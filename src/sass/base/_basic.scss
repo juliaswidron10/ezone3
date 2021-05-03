@@ -1,0 +1,37 @@
+@use "../abstracts/vars" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.frontpageBody {
+  background-image: url(../../img/frontpage-bg.png);
+  // background-color: $dark;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Shapiro";
+}
+
+.overlay {
+  box-shadow: inset 0 0 0 100vw rgba(17, 15, 27, 0.9);
+  animation: blur 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+}
+
+.overlayout {
+  box-shadow: inset 0 0 0 100vw rgba(17, 15, 27, 0.9);
+  animation: blur-out 3s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+}

@@ -1,0 +1,78 @@
+// @import "../abstracts/vars";
+@use "../abstracts/vars" as *;
+
+.frontpage-form {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 20px;
+  grid-template-areas:
+    "form-firstname form-lastname"
+    "form-email form-email";
+
+  .form-group {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .form-firstname {
+    grid-area: form-firstname;
+  }
+
+  .form-lastname {
+    grid-area: form-lastname;
+  }
+
+  .form-email {
+    grid-area: form-email;
+    width: 100%;
+  }
+
+  .form-input {
+    border: 0;
+    border-bottom: 1px solid #43426c;
+    cursor: text;
+    transition: all 0.3s;
+    background-color: transparent;
+  }
+
+  .form-input:focus {
+    outline: 0;
+  }
+
+  .form-label {
+    font-size: 10px;
+    padding-bottom: 3px;
+    transition: all 0.3s;
+    color: $light-label;
+    align-self: flex-start;
+  }
+
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.05rem) scale(1);
+  }
+
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(0.4);
+    cursor: pointer;
+  }
+}

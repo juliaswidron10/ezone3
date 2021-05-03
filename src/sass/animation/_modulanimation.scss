@@ -1,0 +1,148 @@
+@use "../abstracts/vars" as *;
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 8;
+  }
+}
+
+@keyframes blur-out {
+  0% {
+    opacity: 8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.color {
+  display: block;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: 0.8s ease;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.expanded {
+  border-radius: 0;
+  width: 100%;
+  // padding-bottom: 30%;
+  height: 100%;
+  border-radius: 2px;
+  z-index: 10;
+  clip-path: inset(0 0 44% 0);
+}
+
+.color--orange {
+  background-color: $orange;
+  transition-delay: 0.25s;
+}
+
+.fadeout {
+  z-index: -10;
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.slideup {
+  animation: slideup 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translate(-50%, 90%);
+  }
+
+  100% {
+    transform: translate(-50%, -40%);
+  }
+}
+
+.slideupquiz {
+  animation-name: slideupquiz;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideupquiz {
+  0% {
+    transform: translateY(10%);
+    // opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.headline-animated {
+  font-family: "Uniform-Pro-Blk";
+  font-size: 2.5rem;
+  line-height: 1.125;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 1000;
+  padding-bottom: 5px;
+
+  span {
+    display: inline-block;
+    white-space: break-spaces;
+    -webkit-text-stroke: 1px $purple;
+    color: transparent;
+    animation: fill 0.5s calc(var(--index) * 0.02s + 1s) cubic-bezier(0.645, 0.045, 0.355, 1) both;
+    will-change: transform, color;
+  }
+}
+
+@keyframes fill {
+  from {
+    opacity: 0;
+    transform: translateX(2rem) scale(1.2);
+    color: transparent;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    color: $purple;
+  }
+}
+
+.slidedown {
+  animation: slidedown 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translate(-50%, -40%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 70%);
+    opacity: 0;
+  }
+}

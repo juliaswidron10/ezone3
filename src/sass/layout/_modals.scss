@@ -1,0 +1,39 @@
+@use "../abstracts/vars" as *;
+
+.modal {
+  width: 35%;
+  padding: 40px 30px;
+  border-radius: 2px;
+}
+
+.modal-step1 {
+  z-index: 1;
+  background: $dark;
+  p {
+    font-family: "Shapiro-Reg";
+    color: white;
+    font-size: 0.7rem;
+  }
+
+  .headline-green {
+    color: $green;
+    font-family: "Uniform-Pro-Blk";
+    font-size: 2.6rem;
+    padding-bottom: 20px;
+  }
+}
+
+.modal-step2 {
+  z-index: 2;
+  margin-top: 90px;
+
+  p {
+    font-family: "Shapiro-Reg";
+    color: black;
+    font-size: 0.7rem;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,219 @@
+@use "../abstracts/vars" as *;
+
+.quizstyle{
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    width: 70%;
+    height: 75%;
+    background-color: $dark;
+    color: white;
+    text-align: center;
+    font-family: "Uniform-Pro-Med";
+}
+
+
+.quizstyle > form {
+    border: $orange 2px solid;
+    margin: 3rem 4rem 0rem 4rem;
+    width: auto;
+    height: 73%;
+}
+
+.quizstyle .navibutton {
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+}
+.navibutton > button {
+    background-color: $orange;
+    color: $dark;
+    border: none;
+    margin: 5px;
+}
+.navibutton > button.btn-secondary{
+    background-color: $dark;
+    color: $orange;
+    border: none;
+    margin: 5px;
+    border: $orange 2px solid;
+}
+.form-group{
+    padding: 4rem;
+}
+.formlabel{
+   
+    // text-transform: uppercase;
+    font-size: 25px;
+}
+.minmaxrange{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -23%;
+    padding: 1rem .5rem .5rem .5rem;
+    width: 145%;
+}
+.sliderinput{
+    width: 50%;
+    margin-bottom: 1.5rem;
+    margin: 1.2rem auto;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+   }
+   
+input[type="range"]:focus {
+    outline: none;
+   }
+
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color: $orange;
+    height: 2px;
+    border-radius: 8px 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: white;
+    margin-top: -6px;
+    border-radius: 50%;
+   }
+
+.streaming{
+    margin-top: 2rem;
+    font-size: 25px;
+}
+
+.streaming input[type="checkbox"] {
+    -webkit-appearance: none;
+    margin-left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    border:none;
+    background-color: white;
+}
+
+.streaming input[type="checkbox"]:checked {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 5px solid white;
+    background-color: $orange;
+  }
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+.checkboxdiv{
+    width: max-content;
+    height: 1.5rem;
+    border: 2px solid $orange;
+    border-radius: 1rem;
+    // padding: .2rem;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin: .2rem;
+}
+.checkboxdiv.active{
+    background-color: $orange;
+    color: $dark
+}
+
+div.checkboxdiv + input[type=checkbox]:checked {
+    background-color: $orange;
+    
+}
+.checkboxdiv > label{
+    padding: .3rem 1.2rem;
+    text-align: center;
+}
+input.switch{
+    z-index: 10;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: pink;
+      opacity: 0%;
+    width: 5rem;
+    height: 1.4rem;
+    cursor: pointer;
+  }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group > input[type="text"] {
+    margin: 3rem auto; 
+    width: 60%;
+    border-radius: 2rem;
+    border: 2px solid $orange;
+    background-color: $dark;
+    padding: .3rem .7rem;
+    color: white;
+    font-size: 1.1rem;
+}
+.selected-games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.selected-games > p{
+    border-radius: 2rem;
+    background-color: $orange;
+    padding: .5rem 1.2rem;
+    color: $dark;
+    margin: 1rem .4rem;
+}
+
+.specialh{
+    color: $orange;
+    padding-top: 2rem;
+}
+
+.thankyou{
+    padding: 6rem 2rem 2rem 2rem;
+}
+.thankyou p {
+    font-family: "Uniform-Pro-Med";
+    padding: 5rem 2rem 2rem 2rem;
+}
+.thankyou a {
+    border: 2px solid $orange;
+    border-radius: 2rem;
+    width:min-content;
+    align-self: center;
+    padding: .6rem 2rem;
+    color: $orange;
+    text-decoration: none;
+}
+.thankyou a:hover{
+    background-color: $orange;
+    opacity: 60%;
+    color: $dark
+}
+
+.thankyou-animated{
+    font-size: 3rem;
+    font-family: "Uniform-Pro-Blk";
+    color: $green;
+    animation: showtext 1s 1 forwards ease-in;
+}
+
+@keyframes showtext {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:100%;
+    }
+}

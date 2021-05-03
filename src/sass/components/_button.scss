@@ -1,0 +1,49 @@
+@use "../abstracts/vars" as *;
+
+button {
+  font-size: 0.6875rem;
+  font-family: "UniformProCon-Med", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;
+  padding: 9px 16px 7px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-orange {
+  border: 1px solid $orange;
+  color: $orange;
+}
+
+.btn-orange:hover {
+  background-color: $orange;
+  color: $dark;
+}
+
+.btn-purple {
+  border: 1px solid $purple;
+  color: $purple;
+}
+
+.btn-purple:hover {
+  background-color: $purple;
+  color: $orange;
+}
+
+.btn-green {
+  border: 2px solid $green;
+  color: $green;
+}
+
+.btn-green:hover {
+  background-color: $green;
+  color: $dark;
+}
+
+.btn-frontpage {
+  position: relative;
+  margin-top: 34%;
+}
+
